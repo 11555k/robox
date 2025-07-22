@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ROBO.X TECHNOLOGY</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header-content">
+    <img src="img/logo.png" alt="ROBO.X Logo" class="logo">
+    <h1>ROBO.X TECHNOLOGY</h1>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero container">
+  <p>Welcome to our cutting-edge robotics platform.</p>
+  <a href="#">Learn More</a>
+  <br><br>
+  <button>Get Started</button>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    &copy; 2025 ROBO.X Technology. All rights reserved.
+  </div>
+</footer>
+
+<script>
+// Responsive nav toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
+navToggle.addEventListener('click', () => {
+  navList.classList.toggle('nav-list--open');
+});
+</script>
+</body>
+</html>
