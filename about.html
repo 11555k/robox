@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | ROBO.X TECHNOLOGY</title>
+  <link rel="icon" type="image/x-icon" href="/img/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header-content">
+    <img src="img/logo.png" alt="ROBO.X Logo" class="logo">
+    <h1>ROBO.X TECHNOLOGY</h1>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li class="dropdown">
+          <a href="#contact" id="contactDropdownBtn">Contact Us &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="https://wa.me/+201025370914" target="_blank" rel="noopener noreferrer">Whatsapp</a></li>
+            <li><a href="https://wa.me/+201009907236" target="_blank" rel="noopener noreferrer">Other Number</a></li>
+            <li><a href="https://www.facebook.com/2sfhschool" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+
+          </ul>
+        </li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="main-wrapper">
+  <section class="glass-box about-hero">
+    <h2>About Our Team</h2>
+    <p>
+      ROBO.X TECHNOLOGY is powered by a team of industrial-grade robotic engineers dedicated to innovation and excellence. Our engineers have decades of combined experience in designing, building, and deploying advanced robotics solutions for manufacturing, logistics, and automation.
+    </p>
+    <div class="engineers-list">
+      <div class="engineer-card">
+        <img src="img/engineer1.jpg" alt="Engineer John Doe" class="engineer-photo">
+        <h3>John Doe</h3>
+        <p>Lead Robotics Engineer<br>Expert in industrial automation and AI-driven robotics.</p>
+      </div>
+      <div class="engineer-card ">
+        <img src="img/engineer2.jpg" alt="Engineer Jane Smith" class="engineer-photo">
+        <h3>Jane Smith</h3>
+        <p>Senior Mechanical Engineer<br>Specialist in robotic arms and precision manufacturing.</p>
+      </div>
+      <div class="engineer-card ">
+        <img src="img/engineer3.jpg" alt="Engineer Alex Lee" class="engineer-photo">
+        <h3>Alex Lee</h3>
+        <p>Software Architect<br>Developer of control systems and real-time robotics software.</p>
+      </div>
+      <div class="engineer-card ">
+        <img src="img/engineer4.jpg" alt="Engineer Maria Gomez" class="engineer-photo">
+        <h3>Maria Gomez</h3>
+        <p>Electrical Systems Engineer<br>Specialist in sensor integration and industrial safety.</p>
+      </div>
+    </div>
+    <p>
+      Our mission is to deliver reliable, scalable, and intelligent robotic solutions for industries worldwide.
+    </p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    &copy; 2025 ROBO.X Technology. All rights reserved.
+  </div>
+</footer>
+
+<script>
+// Responsive nav toggle,
+const navToggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
+navToggle.addEventListener('click', () => {
+  navList.classList.toggle('nav-list--open');
+});
+
+// Dropdown menu
+const contactDropdownBtn = document.getElementById('contactDropdownBtn');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+const dropdown = document.querySelector('.dropdown');
+
+contactDropdownBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  dropdownMenu.classList.toggle('show');
+});
+
+document.addEventListener('click', function(e) {
+  if (!dropdown.contains(e.target)) {
+    dropdownMenu.classList.remove('show');
+  }
+});
+</script>
+</body>
+</html>
+

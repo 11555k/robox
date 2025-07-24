@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+      <link rel="icon" type="image/x-icon" href="/img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBO.X TECHNOLOGY/services</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+          <img src="img/logo.png" alt="ROBO.X Logo" class="logo">
+        
+          <h1>ROBO.X TECHNOLOGY</h1>
+          <nav class="nav">
+            <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li class="dropdown">
+                        <a href="#contact" id="contactDropdownBtn">Contact Us&#9662;</a>
+                <ul class="dropdown-menu">
+                            <li><a href="https://wa.me/+201025370914" target="_blank">Whatsapp</a></li>
+                            <li><a href="https://wa.me/+201009907236" target="_blank">Other Number</a></li>
+                            <li><a href="https://www.facebook.com/2sfhschool" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+
+                </ul>
+              </li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+          </nav>
+        </div>
+      </header>
+      
+    <main class="main-wrapper">
+        <section class="services glass-box" id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" data-service="0">
+                    <img src="img/armservice.jpg" alt="Service 1" class="service-img">
+                    <h3 class="service-name">Robotic Arm Integration</h3>
+                    <p class="service-desc">Custom robotic arm solutions for industrial automation.</p>
+                </div>
+                <div class="service-card" data-service="1">
+                    <img src="img/PCB.jpeg" alt="Service 2" class="service-img">
+                    <h3 class="service-name">PCB Fabrication & Design</h3>
+                    <p class="service-desc">High-quality custom PCB fabrication & design for fast, reliable, and precise electronic solutions.</p>
+                </div>
+                <div class="service-card" data-service="2">
+                    <img src="img/3dprinting.jpg" alt="3D Designs" class="service-img">
+                    <h3 class="service-name">3D Designs</h3>
+                    <p class="service-desc">Professional 3D modeling and design for prototypes and products.</p>
+                </div>
+                <div class="service-card" data-service="3">
+                    <img src="img/lc.jpg" alt="Laser Cutting" class="service-img">
+                    <h3 class="service-name">Laser Cutting</h3>
+                    <p class="service-desc">Precision laser cutting for custom parts and prototypes.</p>
+                </div>
+            </div>
+            <div class="services-contact-btn-wrapper">
+                <a href="https://wa.me/+201025370914" target="_blank" class="services-contact-btn">Contact Us on WhatsApp</a>
+            </div>
+        </section>
+
+        <div id="serviceModal" class="modal">
+            <div class="modal-content glass-box service-modal-content">
+                <span class="close" id="closeServiceModal">&times;</span>
+                <h2 id="modalServiceName">Service Name</h2>
+                <p id="modalServiceDesc">Service description goes here.</p>
+                <div class="service-modal-video-wrapper">
+                    <video id="modalServiceVideo" controls>
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+<footer class="footer">
+    <div class="container">
+      &copy; 2025 ROBO.X Technology. All rights reserved.
+    </div>
+  </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navList = document.querySelector('.nav-list');
+        navToggle.addEventListener('click', () => {
+            navList.classList.toggle('nav-list--open');
+        });
+
+        const contactDropdownBtn = document.getElementById('contactDropdownBtn');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        const dropdown = document.querySelector('.dropdown');
+        contactDropdownBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            dropdownMenu.classList.toggle('show');
+        });
+        document.addEventListener('click', function(e) {
+            if (!dropdown.contains(e.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+
+        // Updated array with all 4 services
+        const services = [
+            {
+                name: 'Robotic Arm Integration',
+                desc: 'Custom robotic arm solutions for industrial automation.',
+                video: 'img/service1.mp4'
+            },
+            {
+                name: 'PCB Fabrication & Design',
+                desc: 'High-quality custom PCB fabrication & design for fast, reliable, and precise electronic solutions.',
+                video: 'img/service2.mp4'
+            },
+            {
+                name: '3D Designs',
+                desc: 'Professional 3D modeling and design for prototypes and products.',
+                video: 'img/3d-design.mp4'
+            },
+            {
+                name: 'Laser Cutting',
+                desc: 'Precision laser cutting for custom parts and prototypes.',
+                video: 'img/service4.mp4'
+            }
+        ];
+
+        const serviceCards = document.querySelectorAll('.service-card');
+        const serviceModal = document.getElementById('serviceModal');
+        const closeServiceModal = document.getElementById('closeServiceModal');
+        const modalServiceName = document.getElementById('modalServiceName');
+        const modalServiceDesc = document.getElementById('modalServiceDesc');
+        const modalServiceVideo = document.getElementById('modalServiceVideo');
+
+        serviceCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const idx = parseInt(card.getAttribute('data-service'));
+                const service = services[idx];
+                modalServiceName.textContent = service.name;
+                modalServiceDesc.textContent = service.desc;
+                modalServiceVideo.querySelector('source').src = service.video;
+                modalServiceVideo.load();
+                serviceModal.style.display = 'flex';
+            });
+        });
+
+        closeServiceModal.addEventListener('click', () => {
+            serviceModal.style.display = 'none';
+            modalServiceVideo.pause();
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === serviceModal) {
+                serviceModal.style.display = 'none';
+                modalServiceVideo.pause();
+            }
+        });
+    </script>
+</body>
+</html>
