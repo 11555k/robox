@@ -1,9 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About | ROBO.X TECHNOLOGY</title>
+  <title>ROBO.X TECHNOLOGY</title>
   <link rel="icon" type="image/x-icon" href="/img/logo.png">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,7 +17,6 @@
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="products.html">Products</a></li>
-
         <li class="dropdown">
           <a href="#contact" id="contactDropdownBtn">Contact Us &#9662;</a>
           <ul class="dropdown-menu">
@@ -25,6 +24,8 @@
             <li><a href="https://wa.me/+201009907236" target="_blank" rel="noopener noreferrer">Other Number</a></li>
             <li><a href="https://www.facebook.com/2sfhschool" target="_blank" rel="noopener noreferrer">Facebook</a></li>
 
+            
+           
           </ul>
         </li>
       </ul>
@@ -36,47 +37,35 @@
     </nav>
   </div>
 </header>
-
-<main class="main-wrapper">
-  <section class="glass-box about-hero">
-    <h2>About Our Team</h2>
-    <p>
-      ROBO.X TECHNOLOGY is powered by a team of industrial-grade robotic engineers dedicated to innovation and excellence. Our engineers have decades of combined experience in designing, building, and deploying advanced robotics solutions for manufacturing, logistics, and automation.
-    </p>
-    <div class="engineers-list">
-      <div class="engineer-card">
-        <img src="img/engkhaledelneklawi.jpeg" alt="Engineer John Doe" class="engineer-photo">
-        <h3>Eng: Khaled Elnaklawi</h3>
-        <p>CEO & Founder<br>
-         Mechatronics engineer</p>
+        <section class="services glass-box" id="services">
+  <h2>Our Products</h2>
+  <div class="products-grid">
+    
+    <div class="product-card">
+      <div class="product-image">
+        <img src="img/3dprinting.jpg" alt="Industrial Robotics">
       </div>
-      <div class="engineer-card ">
-        <img src="img/engineer2.jpg" alt="Engineer Jane Smith" class="engineer-photo">
-        <h3>Eng: Ahmed Samir</h3>
-        <p>CEO & Founder<br>
-         Mechatronics engineer</p>
-      </div>
-      <div class="engineer-card ">
-        <img src="img/engineer3.jpg" alt="Engineer Alex Lee" class="engineer-photo">
-        <h3>Alex Lee</h3>
-        <p>Software Architect<br>Developer of control systems and real-time robotics software.</p>
-      </div>
-      <div class="engineer-card ">
-        <img src="img/engineer4.jpg" alt="Engineer Maria Gomez" class="engineer-photo">
-        <h3>Maria Gomez</h3>
-        <p>Electrical Systems Engineer<br>Specialist in sensor integration and industrial safety.</p>
-      </div>
-      <div class="engineer-card ">
-        <img src="img/engineer3.jpg" alt="Engineer Alex Lee" class="engineer-photo">
-        <h3>Alex Lee</h3>
-        <p>Software Architect<br>Developer of control systems and real-time robotics software.</p>
+      <div class="product-info">
+        <h3>Industrial Robotics</h3>
+        <p>High-performance robotic arms and automation solutions for factories and production lines.</p>
       </div>
     </div>
-    <p>
-      Our mission is to deliver reliable, scalable, and intelligent robotic solutions for industries worldwide.
-    </p>
-  </section>
-</main>
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="img/ugv.jpg" alt="UGV Robots">
+      </div>
+      <div class="product-info">
+        <h3>UGV Robots</h3>
+        <p>Unmanned Ground Vehicles for remote missions, surveillance, agriculture, and harsh environments.</p>
+      </div>
+    </div>
+
+    <!-- Add more products here using the same structure -->
+
+  </div>
+</section>
+
 
 <footer class="footer">
   <div class="container">
@@ -84,8 +73,11 @@
   </div>
 </footer>
 
+<!-- Contact Modal -->
+
+
 <script>
-// Responsive nav toggle,
+// Responsive nav toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navList = document.querySelector('.nav-list');
 navToggle.addEventListener('click', () => {
@@ -107,7 +99,22 @@ document.addEventListener('click', function(e) {
     dropdownMenu.classList.remove('show');
   }
 });
+
+// Contact Modal
+const contactBtn = document.getElementById('contactBtn');
+const contactModal = document.getElementById('contactModal');
+const closeModal = document.getElementById('closeModal');
+contactBtn.addEventListener('click', () => {
+  contactModal.style.display = 'flex';
+});
+closeModal.addEventListener('click', () => {
+  contactModal.style.display = 'none';
+});
+window.addEventListener('click', (e) => {
+  if (e.target === contactModal) {
+    contactModal.style.display = 'none';
+  }
+});
 </script>
 </body>
 </html>
-

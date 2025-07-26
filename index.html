@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>ROBO.X TECHNOLOGY</title>
   <link rel="icon" type="image/x-icon" href="/img/logo.png">
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,15 +16,13 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
         <li class="dropdown">
           <a href="#contact" id="contactDropdownBtn">Contact Us &#9662;</a>
           <ul class="dropdown-menu">
             <li><a href="https://wa.me/+201025370914" target="_blank" rel="noopener noreferrer">Whatsapp</a></li>
             <li><a href="https://wa.me/+201009907236" target="_blank" rel="noopener noreferrer">Other Number</a></li>
             <li><a href="https://www.facebook.com/2sfhschool" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-
-            
-           
           </ul>
         </li>
       </ul>
@@ -40,52 +37,46 @@
 
 <main class="main-wrapper">
   <section class="glass-box hero">
-  <p>Welcome to our cutting-edge robotics platform.</p>
-  <a href="#">Learn More</a>
-  <br><br>
+    <p>Welcome to our cutting-edge robotics platform.</p>
+    <a href="#">Learn More</a>
+    <br><br>
 
-  <!-- Custom Glassy Carousel Start -->
-  <div class="custom-carousel">
-    <input type="radio" name="carousel" id="slide1" checked>
-    <input type="radio" name="carousel" id="slide2">
-    <input type="radio" name="carousel" id="slide3">
-    <input type="radio" name="carousel" id="slide4">
+    <!-- Custom Glassy Carousel Start -->
+    <div class="custom-carousel">
+      <input type="radio" name="carousel" id="slide1" checked>
+      <input type="radio" name="carousel" id="slide2">
+      <input type="radio" name="carousel" id="slide3">
+      <input type="radio" name="carousel" id="slide4">
 
-    <div class="carousel-slides">
-      <div class="carousel-slide slide1">
-        <img src="https://cdn.josetxu.com/img/gp-fisura-saqueadores.jpg" alt="Slide 1">
-        <div class="carousel-caption">Industrial Robotics</div>
+      <div class="carousel-slides">
+        <div class="carousel-slide slide1">
+          <img src="img/ugv.jpg" alt="Slide 1">
+        </div>
+        <div class="carousel-slide slide2">
+          <img src="img/lc.jpg" alt="Slide 2">
+        </div>
+        <div class="carousel-slide slide3">
+          <img src="img/solartrackingsystem.jpg" alt="Slide 3">
+        </div>
+        <div class="carousel-slide slide4">
+          <img src="img/repair.jpg" alt="Slide 4">
+        </div>
       </div>
-      <div class="carousel-slide slide2">
-        <img src="https://cdn.josetxu.com/img/gp-lucas-hueso.jpg" alt="Slide 2">
-        <div class="carousel-caption">Automation Solutions</div>
-      </div>
-      <div class="carousel-slide slide3">
-        <img src="https://cdn.josetxu.com/img/gp-blues-ojos-bonitos-tres-coronas.jpg" alt="Slide 3">
-        <div class="carousel-caption">AI Integration</div>
-      </div>
-      <div class="carousel-slide slide4">
-        <img src="https://cdn.josetxu.com/img/gp-perros-salvajes-gran-molondrio.jpg" alt="Slide 4">
-        <div class="carousel-caption">Precision Engineering</div>
+
+      <div class="carousel-controls">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+        <label for="slide4"></label>
       </div>
     </div>
+    <!-- Custom Glassy Carousel End -->
 
-    <div class="carousel-controls">
-      <label for="slide1"></label>
-      <label for="slide2"></label>
-      <label for="slide3"></label>
-      <label for="slide4"></label>
-    </div>
-  </div>
-  <!-- Custom Glassy Carousel End -->
-
-  <br>
-  <a href="services.html" >
-  <button>Request Service</button>
-  <!-- ...existing code... -->
-  </a>
-</section>
-
+    <br>
+    <a href="services.html">
+      <button>Request Service</button>
+    </a>
+  </section>
 </main>
 
 <footer class="footer">
@@ -93,9 +84,6 @@
     &copy; 2025 ROBO.X Technology. All rights reserved.
   </div>
 </footer>
-
-<!-- Contact Modal -->
-
 
 <script>
 // Responsive nav toggle
@@ -121,21 +109,15 @@ document.addEventListener('click', function(e) {
   }
 });
 
-// Contact Modal
-const contactBtn = document.getElementById('contactBtn');
-const contactModal = document.getElementById('contactModal');
-const closeModal = document.getElementById('closeModal');
-contactBtn.addEventListener('click', () => {
-  contactModal.style.display = 'flex';
-});
-closeModal.addEventListener('click', () => {
-  contactModal.style.display = 'none';
-});
-window.addEventListener('click', (e) => {
-  if (e.target === contactModal) {
-    contactModal.style.display = 'none';
-  }
-});
+// Auto-advance carousel every 1 second
+(function autoCarousel() {
+  const slides = ['slide1', 'slide2', 'slide3', 'slide4'];
+  let index = 0;
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    document.getElementById(slides[index]).checked = true;
+  }, 3000);
+})();
 </script>
 </body>
 </html>

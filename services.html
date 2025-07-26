@@ -17,7 +17,9 @@
             <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
-              <li><a href="#services">Services</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="products.html">Products</a></li>
+
               <li class="dropdown">
                         <a href="#contact" id="contactDropdownBtn">Contact Us&#9662;</a>
                 <ul class="dropdown-menu">
@@ -42,25 +44,37 @@
             <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card" data-service="0">
-                    <img src="img/armservice.jpg" alt="Service 1" class="service-img">
-                    <h3 class="service-name">Robotic Arm Integration</h3>
-                    <p class="service-desc">Custom robotic arm solutions for industrial automation.</p>
+                    <img src="img/robotics.jpg" alt="Service 1" class="service-img">
+                    <h3 class="service-name">Robotics</h3>
+                    <p class="service-desc">Design, deployment, and support of intelligent robotic systems to automate complex industrial tasks, boost productivity, and ensure precision in your operations.</p>
                 </div>
                 <div class="service-card" data-service="1">
                     <img src="img/PCB.jpeg" alt="Service 2" class="service-img">
-                    <h3 class="service-name">PCB Fabrication & Design</h3>
-                    <p class="service-desc">High-quality custom PCB fabrication & design for fast, reliable, and precise electronic solutions.</p>
+                    <h3 class="service-name">Custom PCB Design & Fabrication</h3>
+                    <p class="service-desc">Expert design and rapid fabrication of high-quality printed circuit boards tailored to your project’s unique requirements.</p>
                 </div>
-                <div class="service-card" data-service="2">
+                <div class="service-card">
                     <img src="img/3dprinting.jpg" alt="3D Designs" class="service-img">
-                    <h3 class="service-name">3D Designs</h3>
-                    <p class="service-desc">Professional 3D modeling and design for prototypes and products.</p>
+                    <h3 class="service-name">3D Modeling & Prototyping</h3>
+                    <p class="service-desc">Professional 3D modeling and rapid prototyping to bring your concepts to life with accuracy and speed.</p>
                 </div>
-                <div class="service-card" data-service="3">
+                <div class="service-card" >
                     <img src="img/lc.jpg" alt="Laser Cutting" class="service-img">
-                    <h3 class="service-name">Laser Cutting</h3>
-                    <p class="service-desc">Precision laser cutting for custom parts and prototypes.</p>
+                    <h3 class="service-name">Precision Laser Cutting</h3>
+                    <p class="service-desc">High-precision laser cutting for custom parts, enclosures, and prototypes using a variety of materials.</p>
+                    
                 </div>
+                  <div class="service-card" >
+                    <img src="img/repair.jpg" alt="Robot Repair & Maintenance" class="service-img">
+                    <h3 class="service-name">Robot Repair & Maintenance</h3>
+                    <p class="service-desc">We provide expert repair and maintenance for all types of robots—including industrial arms, UGVs, drones, and remote-controlled rescue systems like the Smart Rescue Buoy. Whether it's a sensor issue, mechanical failure, or software bug, we’ve got you covered.</p>
+                </div>
+                 <div class="service-card" >
+                    <img src="img/solartrackingsystem.jpg" alt="Robot Repair & Maintenance" class="service-img">
+                    <h3 class="service-name">Renewable Energy & Solar Tracking Systems</h3>
+                    <p class="service-desc">We design and implement advanced solar energy solutions with automatic solar cell tracking systems. Our systems maximize solar efficiency by following the sun throughout the day.</p>
+                </div>
+
             </div>
             <div class="services-contact-btn-wrapper">
                 <a href="https://wa.me/+201025370914" target="_blank" class="services-contact-btn">Contact Us on WhatsApp</a>
@@ -113,23 +127,28 @@
         const services = [
             {
                 name: 'Robotic Arm Integration',
-                desc: 'Custom robotic arm solutions for industrial automation.',
+                desc: 'Seamless integration of advanced robotic arms to automate your manufacturing, assembly, or packaging lines for maximum efficiency and precision.',
                 video: 'img/service1.mp4'
             },
             {
-                name: 'PCB Fabrication & Design',
-                desc: 'High-quality custom PCB fabrication & design for fast, reliable, and precise electronic solutions.',
+                name: 'Custom PCB Design & Fabrication',
+                desc: 'Expert design and rapid fabrication of high-quality printed circuit boards tailored to your project’s unique requirements.',
                 video: 'img/service2.mp4'
             },
             {
-                name: '3D Designs',
-                desc: 'Professional 3D modeling and design for prototypes and products.',
+                name: '3D Modeling & Prototyping',
+                desc: 'Professional 3D modeling and rapid prototyping to bring your concepts to life with accuracy and speed.',
                 video: 'img/3d-design.mp4'
             },
             {
-                name: 'Laser Cutting',
-                desc: 'Precision laser cutting for custom parts and prototypes.',
+                name: 'Precision Laser Cutting',
+                desc: 'High-precision laser cutting for custom parts, enclosures, and prototypes using a variety of materials.',
                 video: 'img/service4.mp4'
+            },
+              {
+                name: 'Robot Repair & Maintenance',
+                desc: 'We provide expert repair and maintenance for all types of robots—including industrial arms, UGVs, drones, and remote-controlled rescue systems like the Smart Rescue Buoy. Whether it\'s a sensor issue, mechanical failure, or software bug, we’ve got you covered.',
+                video: 'img/rescuerobot.jpg'
             }
         ];
 
