@@ -240,17 +240,38 @@ header {
     position: absolute;
     top: 60px;
     right: 0;
-    background: var(--color-dark-gray);
+    background: rgba(26, 26, 26, 0.96); /* FIX: more opaque for visibility */
     flex-direction: column;
-    width: 180px;
+    width: 220px; /* FIX: wider for touch targets */
     gap: 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    border-radius: 12px; /* FIX: more rounded */
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35); /* FIX: stronger shadow */
     display: none;
-    z-index: 100;
+    z-index: 1001; /* FIX: higher z-index to appear above header */
+    padding: 18px 0 18px 0; /* FIX: more padding for touch */
   }
   .nav-list.nav-list--open {
     display: flex;
+  }
+  .nav-list li {
+    width: 100%;
+  }
+  .nav-list li a {
+    padding: 16px 28px; /* FIX: bigger touch area */
+    font-size: 1.15rem;
+    color: var(--color-neon-green);
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: none;
+    transition: background 0.2s, color 0.2s;
+    display: block;
+  }
+  .nav-list li a:hover {
+    background: var(--color-neon-green-hover);
+    color: var(--color-black);
+  }
+  .nav-list li:last-child a {
+    border-bottom: none;
   }
   .nav-toggle {
     display: flex;
@@ -260,6 +281,7 @@ header {
     min-width: 100%;
     box-shadow: none;
     margin-top: 0;
+    background: transparent;
   }
 }
 
