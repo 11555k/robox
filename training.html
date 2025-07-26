@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ROBO.X TECHNOLOGY</title>
+  <link rel="icon" type="image/x-icon" href="/img/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ROBO.X Technology - Egypt's leading robotics engineering, automation, and mechatronics company. Industrial robots, UGVs, PCB design, 3D printing, laser cutting, repair, and solar tracking systems for Egyptian industry.">
+  <meta name="keywords" content="Robotics Egypt, Industrial Robots, Mechatronics Egypt, Automation, UGV, PCB Design, 3D Printing, Laser Cutting, Robot Repair, Solar Tracking, Engineering Egypt, Cairo Robotics, Egyptian Robotics Company, Smart Rescue Buoy, Manufacturing Automation, Electronic Design, Cairo, Egypt, ROBO.X Technology">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header-content">
+    <img src="img/logo.png" alt="ROBO.X Logo" class="logo">
+    <h1>ROBO.X TECHNOLOGY</h1>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li class="dropdown">
+          <a href="#contact" id="contactDropdownBtn">Contact Us &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="https://wa.me/+201025370914" target="_blank" rel="noopener noreferrer">Whatsapp</a></li>
+            <li><a href="https://wa.me/+201009907236" target="_blank" rel="noopener noreferrer">Other Number</a></li>
+            <li><a href="https://www.facebook.com/2sfhschool" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+<!-- Training Section Start -->
+<section class="training-section">
+  <div class="container">
+    <h2 class="section-title">Our Training & Courses</h2>
+    <div class="training-grid">
+      <div class="training-card">
+        <div class="training-img-container">
+          <img src="img/training1.jpeg" alt="Robotics Course" class="training-img">
+        </div>
+        <div class="training-content">
+          <h3>Robotics Engineering Fundamentals</h3>
+          <p>Learn the basics of robotics, automation, and mechatronics with hands-on projects and expert guidance. Ideal for students and professionals looking to enter the robotics industry.</p>
+          <button class="training-btn" data-modal="robotics-modal">Learn More</button>
+        </div>
+      </div>
+    </div>
+    <div class="training-offer">
+      <h4>Special Offers</h4>
+      <ul>
+        <li>Group discounts for schools and universities</li>
+        <li>Certification upon course completion</li>
+        <li>Access to ROBO.X labs and equipment</li>
+        <li>Expert instructors with industry experience</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Course Modals -->
+<div class="training-modal" id="robotics-modal">
+  <div class="training-modal-content">
+    <span class="modal-close">&times;</span>
+    <div class="modal-header">
+      <img src="img/training1.jpeg" alt="Robotics Course" class="modal-img">
+      <h2>Robotics Engineering Fundamentals</h2>
+    </div>
+    <div class="modal-body">
+      <div class="course-details">
+        <div class="detail-item">
+          <span class="detail-label">Next Session:</span>
+          <span class="detail-value">July 28, 2025</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Duration:</span>
+          <span class="detail-value">5 Weeks (20 Hours)</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Schedule:</span>
+          <span class="detail-value">Sat & Mon, 5:00 PM - 7:00 PM</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Location:</span>
+          <span class="detail-value">ROBO.X Main Campus, alexandria</span>
+        </div>
+      </div>
+      <div class="course-description">
+        <h3>Course Overview</h3>
+        <p>This comprehensive course covers the fundamentals of robotics engineering, including:</p>
+        <ul>
+          <li>Introduction to Robotics</li>
+          <li>Motors and Motion Control</li>
+          <li>Electronics and Electrical Circuits</li>
+          <li>Signal Types </li>
+          <li>Wireless Communication Technologies </li>
+          <li>And many more donwload the pdf from the Download Syllabus</li>
+    
+        </ul>
+        <h3>What You'll Learn</h3>
+        <ul>
+          <li>Design and build basic robot structures</li>
+          <li>Program robotic systems using C++</li>
+          <li>Implement sensor-based control systems</li>
+          <li>Develop real-world robotics applications</li>
+        </ul>
+      </div>
+      <div class="course-actions">
+        <a href="img/RoboticsDiplomaCurriculum.pdf" class="download-btn" download>
+          <i class="fas fa-download"></i> Download Syllabus
+        </a>
+       <a href="https://wa.me/+201009907236"><button class="enroll-btn">Enroll Now</button></a> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Training Section End -->
+
+<footer class="footer">
+  <div class="container">
+    &copy; 2025 ROBO.X Technology. All rights reserved.
+  </div>
+</footer>
+
+<script>
+// Responsive nav toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
+navToggle.addEventListener('click', () => {
+  navList.classList.toggle('nav-list--open');
+});
+
+// Dropdown menu
+const contactDropdownBtn = document.getElementById('contactDropdownBtn');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+const dropdown = document.querySelector('.dropdown');
+
+contactDropdownBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  dropdownMenu.classList.toggle('show');
+});
+
+document.addEventListener('click', function(e) {
+  if (!dropdown.contains(e.target)) {
+    dropdownMenu.classList.remove('show');
+  }
+});
+
+// Training Modals
+const trainingBtns = document.querySelectorAll('.training-btn');
+const trainingModals = document.querySelectorAll('.training-modal');
+const modalCloses = document.querySelectorAll('.modal-close');
+
+trainingBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modalId = btn.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'flex';
+  });
+});
+
+modalCloses.forEach(close => {
+  close.addEventListener('click', () => {
+    const modal = close.closest('.training-modal');
+    modal.style.display = 'none';
+  });
+});
+
+window.addEventListener('click', (e) => {
+  trainingModals.forEach(modal => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
+</script>
+</body>
+</html>
