@@ -1,111 +1,356 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ROBO.X TECHNOLOGY</title>
+  <title>ROBO.X TECHNOLOGY - Products</title>
   <link rel="icon" type="image/x-icon" href="/img/logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ROBO.X Technology - Egypt's leading robotics engineering, automation, and mechatronics company. Industrial robots, UGVs, PCB design, 3D printing, laser cutting, repair, and solar tracking systems for Egyptian industry.">
   <meta name="keywords" content="Robotics Egypt, Industrial Robots, Mechatronics Egypt, Automation, UGV, PCB Design, 3D Printing, Laser Cutting, Robot Repair, Solar Tracking, Engineering Egypt, Cairo Robotics, Egyptian Robotics Company, Smart Rescue Buoy, Manufacturing Automation, Electronic Design, Cairo, Egypt, ROBO.X Technology">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Brochure-style sections */
+    .products-hero {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+      margin: 2rem auto;
+      max-width: 1200px;
+      background: rgba(26, 26, 26, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .products-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, var(--color-neon-green), var(--color-neon-green-hover));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .products-hero p {
+      font-size: 1.2rem;
+      color: var(--color-light-gray);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Section styling */
+    .product-section {
+      padding: 4rem 2rem;
+      margin: 2rem auto;
+      max-width: 1200px;
+      background: rgba(26, 26, 26, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      color: var(--color-neon-green);
+      margin-bottom: 1rem;
+      text-shadow: 0 0 15px rgba(127, 255, 0, 0.4);
+      letter-spacing: 1px;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+      color: var(--color-light-gray);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Product cards in brochure style */
+    .brochure-product-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background: rgba(26, 26, 26, 0.65);
+      border: 1.5px solid rgba(127, 255, 0, 0.08);
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+      min-height: 280px;
+    }
+
+    .brochure-product-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 36px rgba(0, 255, 128, 0.18), 0 2px 12px rgba(0, 0, 0, 0.22);
+      border-color: var(--color-neon-green);
+      background: rgba(26, 26, 26, 0.8);
+    }
+
+    .brochure-product-image {
+      flex: 0 0 350px;
+      background: linear-gradient(135deg, #111 60%, #222 100%);
+      border-right: 1.5px solid rgba(127, 255, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow: hidden;
+      position: relative;
+      min-height: 280px;
+    }
+
+    .brochure-product-image img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      max-height: 240px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 255, 128, 0.10), 0 1px 8px rgba(0, 0, 0, 0.18);
+      transition: transform 0.3s ease;
+    }
+
+    .brochure-product-card:hover .brochure-product-image img {
+      transform: scale(1.05);
+    }
+
+    .brochure-product-content {
+      flex: 1;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .brochure-product-content h3 {
+      color: var(--color-neon-green);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .brochure-product-content p {
+      color: var(--color-light-gray);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 900px) {
+      .brochure-product-card {
+        flex-direction: column;
+        min-height: auto;
+      }
+
+      .brochure-product-image {
+        flex: 0 0 auto;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1.5px solid rgba(127, 255, 0, 0.08);
+        min-height: 200px;
+        padding: 16px;
+      }
+
+      .brochure-product-image img {
+        max-width: 280px;
+        max-height: 180px;
+      }
+
+      .brochure-product-content {
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .products-hero h1 {
+        font-size: 2rem;
+      }
+
+      .section-header h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .products-hero {
+        padding: 2rem 1rem;
+      }
+
+      .product-section {
+        padding: 2rem 1rem;
+        margin: 1rem auto;
+      }
+
+      .brochure-product-image {
+        min-height: 160px;
+        padding: 12px;
+      }
+
+      .brochure-product-image img {
+        max-width: 200px;
+        max-height: 140px;
+      }
+
+      .brochure-product-content {
+        padding: 1rem;
+      }
+
+      .brochure-product-content h3 {
+        font-size: 1.4rem;
+      }
+
+      .brochure-product-content p {
+        font-size: 1rem;
+      }
+
+      .products-hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .section-header h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<header class="header">
-  <div class="container header-content">
-    <img src="img/logo.png" alt="ROBO.X Logo" class="logo">
-    <h1>ROBO.X TECHNOLOGY</h1>
-    <nav class="nav">
-      <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li class="dropdown">
-          <a href="#contact" id="contactDropdownBtn">Contact Us &#9662;</a>
-          <ul class="dropdown-menu">
-            <li><a href="https://wa.me/+201025370914" target="_blank" rel="noopener noreferrer">Whatsapp</a></li>
-            <li><a href="https://wa.me/+201009907236" target="_blank" rel="noopener noreferrer">Other Number</a></li>
-            <li><a href="https://www.facebook.com/2sfhschool" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-
-            
-           
-          </ul>
-        </li>
-      </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-    </nav>
-  </div>
-</header>
-        <section class="services glass-box" id="services">
-  <h2>Our Products</h2>
-  <div class="products-grid">
-    <div class="product-card">
-      <div class="product-image">
-        <img src="img/industrialrobots.jpeg" alt="UGV Robots">
-      </div>
-      <div class="product-info">
-        <h3>UGV Robots</h3>
-        <p>Unmanned Ground Vehicles for remote missions, surveillance, agriculture, and harsh environments.</p>
-      </div>
+  <header class="header">
+    <div class="container header-content">
+      <img src="img/logo.png" alt="ROBO.X Logo" class="logo">
+      <h1>ROBO.X TECHNOLOGY</h1>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li class="dropdown">
+            <a href="#contact" id="contactDropdownBtn">Contact Us &#9662;</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://wa.me/+201025370914" target="_blank" rel="noopener noreferrer">Whatsapp</a></li>
+              <li><a href="https://wa.me/+201009907236" target="_blank" rel="noopener noreferrer">Other Number</a></li>
+              <li><a href="https://www.facebook.com/2sfhschool" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
     </div>
+  </header>
 
-    <!-- Add more products here using the same structure -->
+  <main class="main-wrapper">
+    <!-- Products Hero Section -->
+    <section class="products-hero">
+      <h1>Our Products</h1>
+      <p>Discover our innovative solutions designed for industrial monitoring, education, and hands-on learning experiences</p>
+    </section>
 
-  </div>
-</section>
+    <!-- Section 1: Monitoring Devices -->
+    <section class="product-section monitoring-devices">
+      <div class="section-header">
+        <h2>Monitoring Devices</h2>
+        <p>Advanced monitoring solutions designed for gas fields, control rooms, and factory environments. Our devices ensure precision, reliability, and real-time data collection for critical industrial applications.</p>
+      </div>
+      
+      <div class="brochure-product-card">
+        <div class="brochure-product-image">
+          <img src="img/monitroingpms.jpeg" alt="Temperature Monitoring Device">
+        </div>
+        <div class="brochure-product-content">
+          <h3>Temperature Monitoring Device</h3>
+          <p>Our temperature monitoring device is specifically designed to monitor temperature in gas fields and control rooms in factories in general. This advanced system provides real-time temperature tracking with high precision sensors, ensuring optimal operational conditions and early detection of potential issues. The device features robust construction suitable for industrial environments, wireless connectivity for remote monitoring, and comprehensive data logging capabilities. Ideal for maintaining safety standards and operational efficiency in critical industrial settings.</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Section 2: Education Kits -->
+    <section class="product-section education-kits">
+      <div class="section-header">
+        <h2>Education Kits</h2>
+        <p>Comprehensive educational kits designed to teach college students logic design and digital electronics fundamentals. Our kits provide hands-on learning experiences that bridge theory and practical application.</p>
+      </div>
+      
+      <div class="brochure-product-card">
+        <div class="brochure-product-image">
+          <img src="img/rtlnandgatekit.jpeg" alt="NAND Gates Kit">
+        </div>
+        <div class="brochure-product-content">
+          <h3>NAND Gates Kit</h3>
+          <p>This educational kit is specifically aimed at teaching college students logic design, with a focus on NAND gates and fundamental digital circuit principles. The kit includes all necessary components, breadboards, and comprehensive learning materials that guide students through building and understanding various logic gate configurations. Perfect for laboratory sessions and coursework, it helps students grasp the foundational concepts of digital electronics through hands-on experimentation and practical problem-solving exercises.</p>
+        </div>
+      </div>
+    </section>
 
-<footer class="footer">
-  <div class="container">
-    &copy; 2025 ROBO.X Technology. All rights reserved.
-  </div>
-</footer>
+    <!-- Section 3: Student Projects -->
+    <section class="product-section student-projects">
+      <div class="section-header">
+        <h2>Student Projects</h2>
+        <p>Innovative project kits designed to teach students in a more physical way, helping them in labs specified for robotics and innovation. These projects encourage problem-solving using electronics and mechanical designs, providing practical experience that complements theoretical learning.</p>
+      </div>
+      
+      <div class="brochure-product-card">
+        <div class="brochure-product-image">
+          <img src="img/robotics.jpeg" alt="Robotics Student Project">
+        </div>
+        <div class="brochure-product-content">
+          <h3>Robotics & Innovation Project Kit</h3>
+          <p>This comprehensive project kit is aimed at teaching students in a more physical and hands-on way, specifically designed for robotics and innovation laboratories. The kit helps students solve real-world problems using a combination of electronics and mechanical designs. It includes components for building functional robots, sensors for environmental interaction, microcontrollers for programming, and mechanical parts for structural assembly. Perfect for innovation labs, this kit encourages creativity, critical thinking, and practical engineering skills while helping students understand how to integrate electronic systems with mechanical components to create working solutions.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<!-- Contact Modal -->
+  <footer class="footer">
+    <div class="container">
+      &copy; 2025 ROBO.X Technology. All rights reserved.
+    </div>
+  </footer>
 
+  <script>
+    // Responsive nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navList.classList.toggle('nav-list--open');
+      });
+    }
 
-<script>
-// Responsive nav toggle
-const navToggle = document.querySelector('.nav-toggle');
-const navList = document.querySelector('.nav-list');
-navToggle.addEventListener('click', () => {
-  navList.classList.toggle('nav-list--open');
-});
+    // Dropdown menu
+    const contactDropdownBtn = document.getElementById('contactDropdownBtn');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const dropdown = document.querySelector('.dropdown');
 
-// Dropdown menu
-const contactDropdownBtn = document.getElementById('contactDropdownBtn');
-const dropdownMenu = document.querySelector('.dropdown-menu');
-const dropdown = document.querySelector('.dropdown');
+    if (contactDropdownBtn && dropdownMenu && dropdown) {
+      contactDropdownBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropdownMenu.classList.toggle('show');
+      });
 
-contactDropdownBtn.addEventListener('click', function(e) {
-  e.preventDefault();
-  dropdownMenu.classList.toggle('show');
-});
-
-document.addEventListener('click', function(e) {
-  if (!dropdown.contains(e.target)) {
-    dropdownMenu.classList.remove('show');
-  }
-});
-
-// Contact Modal
-const contactBtn = document.getElementById('contactBtn');
-const contactModal = document.getElementById('contactModal');
-const closeModal = document.getElementById('closeModal');
-contactBtn.addEventListener('click', () => {
-  contactModal.style.display = 'flex';
-});
-closeModal.addEventListener('click', () => {
-  contactModal.style.display = 'none';
-});
-window.addEventListener('click', (e) => {
-  if (e.target === contactModal) {
-    contactModal.style.display = 'none';
-  }
-});
-</script>
+      document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdownMenu.classList.remove('show');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
