@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ROBO.X TECHNOLOGY - Training & Education</title>
+  <title>ROBO.X TECHNOLOGY - Products</title>
   <link rel="icon" type="image/x-icon" href="/img/logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ROBO.X Technology - Professional training programs in embedded systems, electronics, programming, and robotics. Expert instructors with academic and industry experience. Training available at our facilities or your location across Egypt.">
-  <meta name="keywords" content="Robotics Training Egypt, Embedded Systems Training, Electronics Courses, Programming Courses, Robotics Education, School Training Programs, Lab Kits, Educational Robotics, Cairo Training, Alexandria Training, Damanhour Training, ROBO.X Technology">
+  <meta name="description" content="ROBO.X Technology - Egypt's leading robotics engineering, automation, and mechatronics company. Industrial robots, UGVs, PCB design, 3D printing, laser cutting, repair, and solar tracking systems for Egyptian industry.">
+  <meta name="keywords" content="Robotics Egypt, Industrial Robots, Mechatronics Egypt, Automation, UGV, PCB Design, 3D Printing, Laser Cutting, Robot Repair, Solar Tracking, Engineering Egypt, Cairo Robotics, Egyptian Robotics Company, Smart Rescue Buoy, Manufacturing Automation, Electronic Design, Cairo, Egypt, ROBO.X Technology">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    /* Training Hero Section */
-    .training-hero {
+    /* Brochure-style sections */
+    .products-hero {
       text-align: center;
       padding: 4rem 2rem 2rem;
       margin: 2rem auto;
@@ -24,31 +24,27 @@
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
 
-    .training-hero h1 {
+    .products-hero h1 {
       font-size: 2.8rem;
-      margin: 0 auto 1rem auto;
-      text-align: center;
+      margin-bottom: 1rem;
       background: linear-gradient(to right, var(--color-neon-green), var(--color-neon-green-hover));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       text-transform: uppercase;
       letter-spacing: 2px;
-      display: block;
     }
 
-    .training-hero p {
+    .products-hero p {
       font-size: 1.2rem;
       color: var(--color-light-gray);
       max-width: 800px;
       margin: 0 auto;
-      text-align: center;
       line-height: 1.6;
-      display: block;
     }
 
-    /* Training Section Styling */
-    .training-section-wrapper {
+    /* Section styling */
+    .product-section {
       padding: 4rem 2rem;
       margin: 2rem auto;
       max-width: 1200px;
@@ -81,174 +77,8 @@
       line-height: 1.6;
     }
 
-    /* Credentials Section */
-    .credentials-card {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      background: rgba(26, 26, 26, 0.65);
-      border: 1.5px solid rgba(127, 255, 0, 0.08);
-      border-radius: 18px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
-      min-height: 280px;
-    }
-
-    .credentials-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 36px rgba(0, 255, 128, 0.18);
-      border-color: var(--color-neon-green);
-    }
-
-    .credentials-image {
-      flex: 0 0 350px;
-      background: linear-gradient(135deg, #111 60%, #222 100%);
-      border-right: 1.5px solid rgba(127, 255, 0, 0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      overflow: hidden;
-      position: relative;
-      min-height: 280px;
-    }
-
-    .credentials-image img {
-      width: 100%;
-      max-width: 320px;
-      height: auto;
-      max-height: 240px;
-      object-fit: contain;
-      border-radius: 12px;
-      box-shadow: 0 4px 24px rgba(0, 255, 128, 0.10), 0 1px 8px rgba(0, 0, 0, 0.18);
-      transition: transform 0.3s ease;
-    }
-
-    .credentials-card:hover .credentials-image img {
-      transform: scale(1.05);
-    }
-
-    .credentials-content {
-      flex: 1;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .credentials-card h3 {
-      color: var(--color-neon-green);
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .credentials-card p {
-      color: var(--color-light-gray);
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-
-    .credentials-highlight {
-      background: rgba(127, 255, 0, 0.1);
-      border-left: 3px solid var(--color-neon-green);
-      padding: 1rem 1.5rem;
-      margin-top: 1rem;
-      border-radius: 8px;
-    }
-
-    .credentials-highlight h4 {
-      color: var(--color-neon-green);
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-
-    .credentials-highlight p {
-      color: var(--color-light-gray);
-      font-size: 1rem;
-      margin: 0;
-    }
-
-    /* Training Location Cards */
-    .location-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .location-card {
-      background: rgba(26, 26, 26, 0.65);
-      border: 1.5px solid rgba(127, 255, 0, 0.08);
-      border-radius: 18px;
-      overflow: hidden;
-      text-align: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .location-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 36px rgba(0, 255, 128, 0.18);
-      border-color: var(--color-neon-green);
-    }
-
-    .location-card-image {
-      width: 100%;
-      height: 200px;
-      overflow: hidden;
-      background: linear-gradient(135deg, #111 60%, #222 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .location-card-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .location-card:hover .location-card-image img {
-      transform: scale(1.1);
-    }
-
-    .location-card-content {
-      padding: 2rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .location-card i {
-      font-size: 3rem;
-      color: var(--color-neon-green);
-      margin-bottom: 1rem;
-    }
-
-    .location-card h3 {
-      color: var(--color-neon-green);
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .location-card p {
-      color: var(--color-light-gray);
-      font-size: 1rem;
-      line-height: 1.6;
-      flex: 1;
-    }
-
-    /* Course Type Cards */
-    .course-type-card {
+    /* Product cards in brochure style */
+    .brochure-product-card {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -262,14 +92,14 @@
       min-height: 280px;
     }
 
-    .course-type-card:hover {
+    .brochure-product-card:hover {
       transform: translateY(-8px) scale(1.02);
       box-shadow: 0 12px 36px rgba(0, 255, 128, 0.18), 0 2px 12px rgba(0, 0, 0, 0.22);
       border-color: var(--color-neon-green);
       background: rgba(26, 26, 26, 0.8);
     }
 
-    .course-type-image {
+    .brochure-product-image {
       flex: 0 0 350px;
       background: linear-gradient(135deg, #111 60%, #222 100%);
       border-right: 1.5px solid rgba(127, 255, 0, 0.08);
@@ -282,7 +112,7 @@
       min-height: 280px;
     }
 
-    .course-type-image img {
+    .brochure-product-image img {
       width: 100%;
       max-width: 320px;
       height: auto;
@@ -293,11 +123,11 @@
       transition: transform 0.3s ease;
     }
 
-    .course-type-card:hover .course-type-image img {
+    .brochure-product-card:hover .brochure-product-image img {
       transform: scale(1.05);
     }
 
-    .course-type-content {
+    .brochure-product-content {
       flex: 1;
       padding: 2rem;
       display: flex;
@@ -305,7 +135,7 @@
       justify-content: center;
     }
 
-    .course-type-content h3 {
+    .brochure-product-content h3 {
       color: var(--color-neon-green);
       font-size: 1.8rem;
       margin-bottom: 1rem;
@@ -313,100 +143,21 @@
       letter-spacing: 0.5px;
     }
 
-    .course-type-content p {
+    .brochure-product-content p {
       color: var(--color-light-gray);
       font-size: 1.1rem;
       line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-
-    .course-features {
-      list-style: none;
-      padding: 0;
       margin: 0;
     }
 
-    .course-features li {
-      color: var(--color-light-gray);
-      font-size: 1rem;
-      line-height: 1.8;
-      padding-left: 1.5rem;
-      position: relative;
-      margin-bottom: 0.5rem;
-    }
-
-    .course-features li:before {
-      content: "→";
-      color: var(--color-neon-green);
-      position: absolute;
-      left: 0;
-      font-size: 1.2rem;
-    }
-
-    /* Training Button Styling */
-    .training-btn {
-      background: var(--color-neon-green);
-      color: var(--color-black);
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .training-btn:hover {
-      background: var(--color-neon-green-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 255, 128, 0.2);
-    }
-
-    /* Kids Training Section */
-    .kids-locations {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .kids-location-item {
-      background: rgba(26, 26, 26, 0.65);
-      border: 1.5px solid rgba(127, 255, 0, 0.08);
-      border-radius: 18px;
-      padding: 1.5rem;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .kids-location-item:hover {
-      transform: translateY(-5px);
-      border-color: var(--color-neon-green);
-      box-shadow: 0 8px 24px rgba(0, 255, 128, 0.15);
-    }
-
-    .kids-location-item h4 {
-      color: var(--color-neon-green);
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .kids-location-item p {
-      color: var(--color-light-gray);
-      font-size: 1rem;
-    }
-
-    /* Responsive Styles */
+    /* Responsive styles */
     @media (max-width: 900px) {
-      .credentials-card {
+      .brochure-product-card {
         flex-direction: column;
         min-height: auto;
       }
 
-      .credentials-image {
+      .brochure-product-image {
         flex: 0 0 auto;
         width: 100%;
         border-right: none;
@@ -415,100 +166,58 @@
         padding: 16px;
       }
 
-      .credentials-image img {
+      .brochure-product-image img {
         max-width: 280px;
         max-height: 180px;
       }
 
-      .credentials-content {
+      .brochure-product-content {
         padding: 1.5rem;
         text-align: center;
       }
 
-      .course-type-card {
-        flex-direction: column;
-        min-height: auto;
-      }
-
-      .course-type-image {
-        flex: 0 0 auto;
-        width: 100%;
-        border-right: none;
-        border-bottom: 1.5px solid rgba(127, 255, 0, 0.08);
-        min-height: 200px;
-        padding: 16px;
-      }
-
-      .course-type-image img {
-        max-width: 280px;
-        max-height: 180px;
-      }
-
-      .course-type-content {
-        padding: 1.5rem;
-        text-align: center;
-      }
-
-      .training-hero h1 {
+      .products-hero h1 {
         font-size: 2rem;
       }
 
       .section-header h2 {
         font-size: 2rem;
       }
-
-      .location-cards {
-        grid-template-columns: 1fr;
-      }
     }
 
     @media (max-width: 600px) {
-      .training-hero {
+      .products-hero {
         padding: 2rem 1rem;
       }
 
-      .training-section-wrapper {
+      .product-section {
         padding: 2rem 1rem;
         margin: 1rem auto;
       }
 
-      .credentials-image {
+      .brochure-product-image {
         min-height: 160px;
         padding: 12px;
       }
 
-      .credentials-image img {
+      .brochure-product-image img {
         max-width: 200px;
         max-height: 140px;
       }
 
-      .credentials-content {
+      .brochure-product-content {
         padding: 1rem;
       }
 
-      .credentials-card h3 {
+      .brochure-product-content h3 {
         font-size: 1.4rem;
       }
 
-      .course-type-image {
-        min-height: 160px;
-        padding: 12px;
+      .brochure-product-content p {
+        font-size: 1rem;
       }
 
-      .course-type-image img {
-        max-width: 200px;
-        max-height: 140px;
-      }
-
-      .course-type-content {
-        padding: 1rem;
-      }
-
-      .course-type-content h3 {
-        font-size: 1.4rem;
-      }
-
-      .training-hero h1 {
+      .products-hero h1 {
         font-size: 1.6rem;
       }
 
@@ -519,408 +228,129 @@
   </style>
 </head>
 <body>
-<header class="header">
-  <div class="container header-content">
-    <img src="img/logo.png" alt="ROBO.X Logo" class="logo">
-    <h1>ROBO.X TECHNOLOGY</h1>
-    <nav class="nav">
-      <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li class="dropdown">
-          <a href="#contact" id="contactDropdownBtn">Contact Us &#9662;</a>
-          <ul class="dropdown-menu">
-            <li><a href="https://wa.me/+201025370914" target="_blank" rel="noopener noreferrer">Whatsapp</a></li>
-            <li><a href="https://wa.me/+201009907236" target="_blank" rel="noopener noreferrer">Other Number</a></li>
-            <li><a href="https://www.facebook.com/2sfhschool" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-          </ul>
-        </li>
-      </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-    </nav>
-  </div>
-</header>
-
-<main class="main-wrapper">
-  <!-- Training Hero Section -->
-  <section class="training-hero">
-    <h1>Professional Training & Education Programs</h1>
-    <p>Comprehensive technical training solutions designed for schools, universities, and educational institutions. Our expert instructors bring years of academic and industry experience to deliver hands-on learning experiences that prepare students for real-world challenges.</p>
-  </section>
-
-  <!-- Credentials Section -->
-  <section class="training-section-wrapper">
-    <div class="section-header">
-      <h2>Our Expertise & Credentials</h2>
-      <p>ROBO.X Technology is proud to have experienced instructors with proven track records in both academic and professional settings.</p>
+  <header class="header">
+    <div class="container header-content">
+      <img src="img/logo.png" alt="ROBO.X Logo" class="logo">
+      <h1>ROBO.X TECHNOLOGY</h1>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li class="dropdown">
+            <a href="#contact" id="contactDropdownBtn">Contact Us &#9662;</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://wa.me/+201025370914" target="_blank" rel="noopener noreferrer">Whatsapp</a></li>
+              <li><a href="https://wa.me/+201009907236" target="_blank" rel="noopener noreferrer">Other Number</a></li>
+              <li><a href="https://www.facebook.com/2sfhschool" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
     </div>
-    
-    <div class="credentials-card">
-      <div class="credentials-image">
-        <img src="img/airdefense.jpeg" alt="Air Defense Academy">
-      </div>
-      <div class="credentials-content">
-        <h3>Academic Excellence</h3>
-        <p>Our team includes experienced lecturers who have served at prestigious institutions including the Air Defense Academy (أكاديميه الدفاع الجوي), bringing military-grade precision and academic rigor to our training programs. This unique combination of academic excellence and practical industry experience ensures that students receive the highest quality education in embedded systems, electronics, and programming.</p>
-        
-        <div class="credentials-highlight">
-          <h4>Engineers Syndicate Courses (نقابه المهندسين)</h4>
-          <p>We also offer specialized courses at the Engineers Syndicate (نقابه المهندسين) focusing on <strong>Communication</strong> and <strong>IoT (Internet of Things)</strong> technologies. These courses are designed for professional engineers seeking to enhance their skills in modern communication systems and IoT applications.</p>
-        </div>
-      </div>
-    </div>
+  </header>
 
-    <div class="credentials-card" style="margin-top: 2rem;">
-      <div class="credentials-image">
-        <img src="img/engeeneringexcellence.jpeg" alt="Engineering Excellence">
-      </div>
-      <div class="credentials-content">
-        <h3>Engineering Excellence</h3>
-        <p>Our comprehensive engineering training programs combine theoretical knowledge with hands-on practical experience. We provide specialized instruction in various engineering disciplines, ensuring that students and professionals receive the highest quality education tailored to modern industry requirements.</p>
-      </div>
-    </div>
-  </section>
+  <main class="main-wrapper">
+    <!-- Products Hero Section -->
+    <section class="products-hero">
+      <h1>Our Products</h1>
+      <p>Discover our innovative solutions designed for industrial monitoring, education, and hands-on learning experiences</p>
+    </section>
 
-  <!-- Training Locations Section -->
-  <section class="training-section-wrapper">
-    <div class="section-header">
-      <h2>Training Delivery Options</h2>
-      <p>We offer flexible training solutions to meet your institution's needs, whether at our state-of-the-art facilities or at your location.</p>
-    </div>
-    
-    <div class="location-cards">
-      <div class="location-card">
-        <div class="location-card-image">
-          <img src="img/onsite.jpeg" alt="At Our Facilities">
-        </div>
-        <div class="location-card-content">
-          <i class="fas fa-building"></i>
-          <h3>At Our Facilities</h3>
-          <p>Training conducted at ROBO.X Technology's fully equipped laboratories and training centers. Students have access to professional-grade equipment, development boards, and comprehensive learning resources in a dedicated educational environment.</p>
-        </div>
+    <!-- Section 1: Monitoring Devices -->
+    <section class="product-section monitoring-devices">
+      <div class="section-header">
+        <h2>Monitoring Devices</h2>
+        <p>Advanced monitoring solutions designed for gas fields, control rooms, and factory environments. Our devices ensure precision, reliability, and real-time data collection for critical industrial applications.</p>
       </div>
       
-      <div class="location-card">
-        <div class="location-card-image">
-          <img src="img/atyourinstution.jpeg" alt="On-Site Training">
+      <div class="brochure-product-card">
+        <div class="brochure-product-image">
+          <img src="img/monitroingpms.jpeg" alt="Temperature Monitoring Device">
         </div>
-        <div class="location-card-content">
-          <i class="fas fa-chalkboard-teacher"></i>
-          <h3>At Your Institution</h3>
-          <p>We bring our expertise directly to your school or educational center. Our mobile training programs include all necessary equipment and materials, allowing students to learn in their familiar environment while benefiting from our professional instruction.</p>
+        <div class="brochure-product-content">
+          <h3>Temperature Monitoring Device</h3>
+          <p>Our temperature monitoring device is specifically designed to monitor temperature in gas fields and control rooms in factories in general. This advanced system provides real-time temperature tracking with high precision sensors, ensuring optimal operational conditions and early detection of potential issues. The device features robust construction suitable for industrial environments, wireless connectivity for remote monitoring, and comprehensive data logging capabilities. Ideal for maintaining safety standards and operational efficiency in critical industrial settings.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Education Kits -->
+    <section class="product-section education-kits">
+      <div class="section-header">
+        <h2>Education Kits</h2>
+        <p>Comprehensive educational kits designed to teach college students logic design and digital electronics fundamentals. Our kits provide hands-on learning experiences that bridge theory and practical application.</p>
       </div>
       
-      <div class="location-card">
-        <div class="location-card-image">
-          <img src="img/centers.jpeg" alt="Course-Based Centers">
+      <div class="brochure-product-card">
+        <div class="brochure-product-image">
+          <img src="img/rtlnandgatekit.jpeg" alt="NAND Gates Kit">
         </div>
-        <div class="location-card-content">
-          <i class="fas fa-graduation-cap"></i>
-          <h3>Course-Based Centers</h3>
-          <p>We partner with established educational centers across Egypt to deliver structured training programs. These partnerships provide students with convenient access to our courses at multiple locations throughout the country.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Embedded Systems Training Section -->
-  <section class="training-section-wrapper">
-    <div class="section-header">
-      <h2>Embedded Systems Training</h2>
-      <p>Comprehensive courses in embedded systems design and development, covering microcontrollers, real-time systems, and hardware-software integration.</p>
-    </div>
-    
-    <div class="course-type-card">
-      <div class="course-type-image">
-        <img src="img/embeddedsystems.jpeg" alt="Embedded Systems Training">
-      </div>
-      <div class="course-type-content">
-        <h3>Embedded Systems & Microcontrollers</h3>
-        <p>Our embedded systems training program provides students with hands-on experience in designing and programming microcontroller-based systems. This course is essential for students pursuing careers in electronics, automation, and IoT development.</p>
-        <ul class="course-features">
-          <li>Microcontroller architecture and programming (Arduino, ARM, PIC)</li>
-          <li>Real-time operating systems and task scheduling</li>
-          <li>Interfacing with sensors, actuators, and communication modules</li>
-          <li>Hardware-software co-design principles</li>
-          <li>Debugging and testing embedded systems</li>
-          <li>IoT and wireless communication integration</li>
-        </ul>
-        <button class="training-btn" data-modal="robotics-modal" style="align-self: flex-start; margin-top: 1rem;">
-          <i class="fas fa-info-circle"></i> Contact Us for Services
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Electronics Training Section -->
-  <section class="training-section-wrapper">
-    <div class="section-header">
-      <h2>Electronics Training</h2>
-      <p>Fundamental and advanced electronics courses covering circuit design, PCB development, and electronic system integration for educational institutions.</p>
-    </div>
-    
-    <div class="course-type-card">
-      <div class="course-type-image">
-        <img src="img/electronics.jpeg" alt="Electronics Training">
-      </div>
-      <div class="course-type-content">
-        <h3>Electronics & Circuit Design</h3>
-        <p>Our electronics training program covers everything from basic circuit theory to advanced PCB design and manufacturing. Perfect for schools looking to establish or enhance their electronics laboratories with practical, hands-on learning experiences.</p>
-        <ul class="course-features">
-          <li>Fundamental circuit analysis and design principles</li>
-          <li>Analog and digital electronics fundamentals</li>
-          <li>PCB design using industry-standard software</li>
-          <li>Component selection and circuit optimization</li>
-          <li>Prototyping and testing methodologies</li>
-          <li>Power electronics and motor control systems</li>
-        </ul>
-        <button class="training-btn" data-modal="robotics-modal" style="align-self: flex-start; margin-top: 1rem;">
-          <i class="fas fa-info-circle"></i> Contact Us for Services
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Programming Training Section -->
-  <section class="training-section-wrapper">
-    <div class="section-header">
-      <h2>Programming Training</h2>
-      <p>Comprehensive programming courses tailored for robotics and embedded systems applications, from basic concepts to advanced implementation.</p>
-    </div>
-    
-    <div class="course-type-card">
-      <div class="course-type-image">
-        <img src="img/training1.jpeg" alt="Programming Training">
-      </div>
-      <div class="course-type-content">
-        <h3>Programming for Robotics & Embedded Systems</h3>
-        <p>Our programming courses focus on languages and techniques essential for robotics and embedded systems development. Students learn to write efficient, reliable code for controlling hardware and implementing complex algorithms.</p>
-        <ul class="course-features">
-          <li>C/C++ programming for embedded systems</li>
-          <li>Python for robotics and automation</li>
-          <li>Algorithm design and optimization</li>
-          <li>Real-time programming concepts</li>
-          <li>Hardware abstraction and driver development</li>
-          <li>Debugging and code optimization techniques</li>
-        </ul>
-        <button class="training-btn" data-modal="robotics-modal" style="align-self: flex-start; margin-top: 1rem;">
-          <i class="fas fa-info-circle"></i> Contact Us for Services
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Kids Training Section -->
-  <section class="training-section-wrapper">
-    <div class="section-header">
-      <h2>Kids & Youth Training Programs</h2>
-      <p>Specialized training programs designed for younger students, making technology accessible and engaging through hands-on projects and interactive learning experiences.</p>
-    </div>
-    
-    <div class="course-type-card">
-      <div class="course-type-image">
-        <img src="img/kidstraining.jpeg" alt="Kids Training Programs">
-      </div>
-      <div class="course-type-content">
-        <h3>Robotics & Electronics for Kids</h3>
-        <p>Our kids' training programs are designed to introduce young learners to the exciting world of robotics, electronics, and programming in a fun and engaging way. We have successfully conducted programs across multiple cities in Egypt, helping children develop problem-solving skills and technological literacy from an early age.</p>
-        <ul class="course-features">
-          <li>Age-appropriate robotics projects and activities</li>
-          <li>Basic electronics and circuit building</li>
-          <li>Visual programming and block-based coding</li>
-          <li>Hands-on assembly and construction projects</li>
-          <li>Team-based learning and collaboration</li>
-          <li>Creative problem-solving challenges</li>
-        </ul>
-        <div style="margin-top: 1.5rem;">
-          <h4 style="color: var(--color-neon-green); font-size: 1.2rem; margin-bottom: 1rem;">Active Training Locations:</h4>
-          <div class="kids-locations">
-            <div class="kids-location-item">
-              <h4><i class="fas fa-map-marker-alt"></i> Cairo</h4>
-              <p>Regular programs and workshops</p>
-            </div>
-            <div class="kids-location-item">
-              <h4><i class="fas fa-map-marker-alt"></i> Alexandria</h4>
-              <p>Ongoing training sessions</p>
-            </div>
-            <div class="kids-location-item">
-              <h4><i class="fas fa-map-marker-alt"></i> Damanhour</h4>
-              <p>Active educational programs</p>
-            </div>
-          </div>
-        </div>
-        <button class="training-btn" data-modal="robotics-modal" style="align-self: flex-start; margin-top: 1rem;">
-          <i class="fas fa-info-circle"></i> Contact Us for Services
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Special Offers Section -->
-  <section class="training-section-wrapper">
-    <div class="section-header">
-      <h2>Special Offers for Educational Institutions</h2>
-      <p>We offer customized training packages and special arrangements for schools, universities, and educational centers.</p>
-    </div>
-    
-    <div class="training-offer">
-      <h4>Institutional Benefits</h4>
-      <ul>
-        <li>Group discounts for schools and universities</li>
-        <li>Certification upon course completion</li>
-        <li>Access to ROBO.X labs and equipment</li>
-        <li>Expert instructors with academic and industry experience</li>
-        <li>Customized curriculum to match your institution's needs</li>
-        <li>Comprehensive lab kits and educational materials</li>
-        <li>Ongoing support and consultation</li>
-        <li>Flexible scheduling to accommodate academic calendars</li>
-      </ul>
-    </div>
-  </section>
-</main>
-
-<!-- Course Modals -->
-<div class="training-modal" id="robotics-modal">
-  <div class="training-modal-content">
-    <span class="modal-close">&times;</span>
-    <div class="modal-header">
-      <h2>Training Services Information</h2>
-    </div>
-    <div class="modal-body">
-      <div class="course-description" style="text-align: center;">
-        <div style="margin-bottom: 2rem;">
-          <i class="fas fa-info-circle" style="font-size: 3rem; color: var(--color-neon-green); margin-bottom: 1rem;"></i>
-          <h3 style="color: var(--color-neon-green); font-size: 1.8rem; margin-bottom: 1rem;">Currently Not Offering Regular Courses</h3>
-          <p style="font-size: 1.2rem; color: var(--color-light-gray); line-height: 1.8; max-width: 700px; margin: 0 auto;">
-            We are currently not offering scheduled courses at this time. However, we are available to provide customized teaching services tailored to your specific needs.
-          </p>
-        </div>
-        
-        <div style="background: rgba(26, 26, 26, 0.6); border-radius: 12px; padding: 2rem; margin: 2rem 0; border: 1.5px solid rgba(127, 255, 0, 0.1);">
-          <h3 style="color: var(--color-neon-green); font-size: 1.5rem; margin-bottom: 1.5rem;">Custom Teaching Services Available</h3>
-          <p style="font-size: 1.1rem; color: var(--color-light-gray); line-height: 1.8; margin-bottom: 1.5rem;">
-            We specialize in providing customized teaching services for educational institutions, including:
-          </p>
-          <ul style="text-align: left; max-width: 600px; margin: 0 auto; list-style: none; padding: 0;">
-            <li style="color: var(--color-light-gray); font-size: 1.1rem; line-height: 2; padding-left: 2rem; position: relative; margin-bottom: 0.8rem;">
-              <i class="fas fa-check-circle" style="color: var(--color-neon-green); position: absolute; left: 0; top: 0.3rem;"></i>
-              Customized training programs for your institution
-            </li>
-            <li style="color: var(--color-light-gray); font-size: 1.1rem; line-height: 2; padding-left: 2rem; position: relative; margin-bottom: 0.8rem;">
-              <i class="fas fa-check-circle" style="color: var(--color-neon-green); position: absolute; left: 0; top: 0.3rem;"></i>
-              On-site training at your facility
-            </li>
-            <li style="color: var(--color-light-gray); font-size: 1.1rem; line-height: 2; padding-left: 2rem; position: relative; margin-bottom: 0.8rem;">
-              <i class="fas fa-check-circle" style="color: var(--color-neon-green); position: absolute; left: 0; top: 0.3rem;"></i>
-              Specialized workshops and seminars
-            </li>
-            <li style="color: var(--color-light-gray); font-size: 1.1rem; line-height: 2; padding-left: 2rem; position: relative; margin-bottom: 0.8rem;">
-              <i class="fas fa-check-circle" style="color: var(--color-neon-green); position: absolute; left: 0; top: 0.3rem;"></i>
-              Curriculum development and consultation
-            </li>
-            <li style="color: var(--color-light-gray); font-size: 1.1rem; line-height: 2; padding-left: 2rem; position: relative; margin-bottom: 0.8rem;">
-              <i class="fas fa-check-circle" style="color: var(--color-neon-green); position: absolute; left: 0; top: 0.3rem;"></i>
-              Lab setup and equipment training
-            </li>
-          </ul>
-        </div>
-
-        <div style="margin-top: 2rem;">
-          <p style="font-size: 1.2rem; color: var(--color-light-gray); margin-bottom: 1.5rem; font-weight: 600;">
-            Contact us to discuss your specific teaching requirements
-          </p>
+        <div class="brochure-product-content">
+          <h3>NAND Gates Kit</h3>
+          <p>This educational kit is specifically aimed at teaching college students logic design, with a focus on NAND gates and fundamental digital circuit principles. The kit includes all necessary components, breadboards, and comprehensive learning materials that guide students through building and understanding various logic gate configurations. Perfect for laboratory sessions and coursework, it helps students grasp the foundational concepts of digital electronics through hands-on experimentation and practical problem-solving exercises.</p>
         </div>
       </div>
-      <div class="course-actions">
-        <a href="https://wa.me/+201009907236" style="text-decoration: none;">
-          <button class="enroll-btn" style="width: 100%; max-width: 300px;">
-            <i class="fas fa-phone"></i> Contact Us for Custom Services
-          </button>
-        </a>
-        <a href="https://wa.me/+201025370914" style="text-decoration: none; margin-top: 1rem; display: inline-block;">
-          <button class="download-btn" style="width: 100%; max-width: 300px;">
-            <i class="fab fa-whatsapp"></i> Alternative Contact
-          </button>
-        </a>
+    </section>
+
+    <!-- Section 3: Student Projects -->
+    <section class="product-section student-projects">
+      <div class="section-header">
+        <h2>Student Projects</h2>
+        <p>Innovative project kits designed to teach students in a more physical way, helping them in labs specified for robotics and innovation. These projects encourage problem-solving using electronics and mechanical designs, providing practical experience that complements theoretical learning.</p>
       </div>
+      
+      <div class="brochure-product-card">
+        <div class="brochure-product-image">
+          <img src="img/robotics.jpeg" alt="Robotics Student Project">
+        </div>
+        <div class="brochure-product-content">
+          <h3>Robotics & Innovation Project Kit</h3>
+          <p>This comprehensive project kit is aimed at teaching students in a more physical and hands-on way, specifically designed for robotics and innovation laboratories. The kit helps students solve real-world problems using a combination of electronics and mechanical designs. It includes components for building functional robots, sensors for environmental interaction, microcontrollers for programming, and mechanical parts for structural assembly. Perfect for innovation labs, this kit encourages creativity, critical thinking, and practical engineering skills while helping students understand how to integrate electronic systems with mechanical components to create working solutions.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      &copy; 2025 ROBO.X Technology. All rights reserved.
     </div>
-  </div>
-</div>
+  </footer>
 
-<footer class="footer">
-  <div class="container">
-    &copy; 2025 ROBO.X Technology. All rights reserved.
-  </div>
-</footer>
-
-<script>
-// Responsive nav toggle
-const navToggle = document.querySelector('.nav-toggle');
-const navList = document.querySelector('.nav-list');
-if (navToggle && navList) {
-  navToggle.addEventListener('click', () => {
-    navList.classList.toggle('nav-list--open');
-  });
-}
-
-// Dropdown menu
-const contactDropdownBtn = document.getElementById('contactDropdownBtn');
-const dropdownMenu = document.querySelector('.dropdown-menu');
-const dropdown = document.querySelector('.dropdown');
-
-if (contactDropdownBtn && dropdownMenu && dropdown) {
-  contactDropdownBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    dropdownMenu.classList.toggle('show');
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!dropdown.contains(e.target)) {
-      dropdownMenu.classList.remove('show');
+  <script>
+    // Responsive nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navList.classList.toggle('nav-list--open');
+      });
     }
-  });
-}
 
-// Training Modals
-const trainingBtns = document.querySelectorAll('.training-btn');
-const trainingModals = document.querySelectorAll('.training-modal');
-const modalCloses = document.querySelectorAll('.modal-close');
+    // Dropdown menu
+    const contactDropdownBtn = document.getElementById('contactDropdownBtn');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const dropdown = document.querySelector('.dropdown');
 
-trainingBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const modalId = btn.getAttribute('data-modal');
-    if (modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.style.display = 'flex';
-      }
+    if (contactDropdownBtn && dropdownMenu && dropdown) {
+      contactDropdownBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropdownMenu.classList.toggle('show');
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdownMenu.classList.remove('show');
+        }
+      });
     }
-  });
-});
-
-modalCloses.forEach(close => {
-  close.addEventListener('click', () => {
-    const modal = close.closest('.training-modal');
-    if (modal) {
-      modal.style.display = 'none';
-    }
-  });
-});
-
-window.addEventListener('click', (e) => {
-  trainingModals.forEach(modal => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-});
-</script>
+  </script>
 </body>
 </html>
